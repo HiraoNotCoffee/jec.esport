@@ -14,8 +14,12 @@ class CreateUserSnsTable extends Migration
     public function up()
     {
         Schema::create('user_sns', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+
+          $table->integer("user_id")->nullable()->comment('ユーザーID');
+          $table->text("sns_id")->nullable()->comment('SNSID');
+          $table->text("url")->comment('URL');
+          $table->bigIncrements('id');
+          $table->timestamps();
         });
     }
 

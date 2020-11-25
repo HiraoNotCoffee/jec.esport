@@ -14,8 +14,12 @@ class CreateChatsTable extends Migration
     public function up()
     {
         Schema::create('chats', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+
+          $table->integer("send")->comment('送信者ID');
+          $table->integer("receive")->comment('受信者ID');
+          $table->text("message")->comment('メッセージ');
+          $table->bigIncrements('id');
+          $table->timestamps();
         });
     }
 

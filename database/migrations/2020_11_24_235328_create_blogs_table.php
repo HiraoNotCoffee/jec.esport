@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAdssencesTable extends Migration
+class CreateBlogsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateAdssencesTable extends Migration
      */
     public function up()
     {
-        Schema::create('adssences', function (Blueprint $table) {
+        Schema::create('blogs', function (Blueprint $table) {
 
-
-            $table->string("name")->comment('名前');
-            $table->text("url")->nullable()->comment('URL');
-            $table->text("icon")->default('img/default/p_img')->comment('画像のパス');
+            $table->text("title")->default('No title')->comment('ブログタイトル');
+            $table->text("detail")->comment('詳細');
             $table->bigIncrements('id');
             $table->timestamps();
         });
@@ -31,6 +29,6 @@ class CreateAdssencesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('adssences');
+        Schema::dropIfExists('blogs');
     }
 }

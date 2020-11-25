@@ -14,6 +14,8 @@ class CreateGameTitlesTable extends Migration
     public function up()
     {
         Schema::create('game_titles', function (Blueprint $table) {
+
+            $table->string("title")->nullable()->comment('ゲーム名');
             $table->bigIncrements('id');
             $table->timestamps();
         });
