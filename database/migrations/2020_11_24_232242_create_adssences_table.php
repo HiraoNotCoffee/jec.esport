@@ -18,7 +18,7 @@ class CreateAdssencesTable extends Migration
 
             $table->string("name")->comment('名前');
             $table->text("url")->nullable()->comment('URL');
-            $table->text("icon")->default('img/default/p_img')->comment('画像のパス');
+            $table->string("icon")->default('img/default/p_img')->comment('画像のパス');
             $table->bigIncrements('id');
             $table->timestamps();
         });

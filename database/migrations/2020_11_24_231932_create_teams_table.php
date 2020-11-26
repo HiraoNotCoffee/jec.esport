@@ -15,10 +15,10 @@ class CreateTeamsTable extends Migration
     {
         Schema::create('teams', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('name')->default()->comment('チームの名前');
-            $table->text('detail')->nullable()->default()->comment('チームの説明文');
-            $table->text('icon')->nullable()->delault('img/team.jpg')-comment('チームアイコン');
-            $table->integer('week_id')->nullable()->default()->comment('活動日ID');
+            $table->text('name')->comment('チームの名前');
+            $table->text('detail')->nullable()->comment('チームの説明文');
+            $table->text('icon')->nullable()->delault('img/team.jpg')->comment('チームアイコン');
+            $table->integer('week_id')->nullable()->comment('活動日ID');
             $table->timestamps();
         });
     }

@@ -15,7 +15,7 @@ class CreateBlogsTable extends Migration
     {
         Schema::create('blogs', function (Blueprint $table) {
 
-            $table->text("title")->default('No title')->comment('ブログタイトル');
+            $table->string("title")->default('No title')->comment('ブログタイトル');
             $table->text("detail")->comment('詳細');
             $table->bigIncrements('id');
             $table->timestamps();
