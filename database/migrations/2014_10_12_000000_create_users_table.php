@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->text("detail")->nullable()->comment('プロフィール');
             $table->string("icon")->default('img/default/icon.jpg')->comment('画像のパス');
             $table->string("header")->nullable()->default('img/default/header.jpg')->comment('ヘッダー画像');
-            $table->integer("staff_flg")->comment('０.管理者　1.一般会員　');
+            $table->integer("staff_flg")->default(1)->comment('０.管理者　1.一般会員　');
             $table->integer("play_environment")->nullable()->comment('活動環境');
             $table->integer("title_id")->nullable()->comment('ゲームタイトルID');
             $table->integer("team_id")->nullable()->comment('チームID');

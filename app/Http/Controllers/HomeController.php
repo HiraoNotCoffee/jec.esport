@@ -17,14 +17,10 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * ほーむがめんを表示
      */
     public function index()
     {
-        $user = User::getUser(1);
-        var_dump($user);
-              return view('home');
+      return view('home');
     }
 }

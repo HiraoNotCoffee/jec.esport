@@ -38,8 +38,15 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    /**
+    * ゆーざーについて取得
+    *
+    */
     public static function getUser($id){
-      $user = User::find($id)->get()->toArray();
+      $user = User::where('id', $id)->get()->toArray()[0];
       return $user;
     }
+
+
+
 }
