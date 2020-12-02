@@ -15,7 +15,8 @@ class CreateContactsTable extends Migration
     {
         Schema::create('contacts', function (Blueprint $table) {
 
-            $table->integer("user_id")->nullable()->comment('ユーザーID');
+            $table->string("name")->nullable()->comment('お問い合わせ者名');
+            $table->string("mail")->nullable()->comment('メールアドレス');
             $table->text("body")->comment('問い合わせ内容');
             $table->integer("flg")->nullable()->default(0)->comment('既読フラグ');
             $table->bigIncrements('id');
