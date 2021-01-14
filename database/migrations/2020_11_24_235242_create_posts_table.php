@@ -14,13 +14,12 @@ class CreatePostsTable extends Migration
     public function up()
     {
         Schema::create('posts', function (Blueprint $table) {
-
-            $table->integer("user_id")->comment('ユーザーID');
-            $table->integer("team_id")->comment('チームID');
-            $table->integer("reaction")->nullable()->comment('オファーに対する反応');
-            $table->integer("flg")->nullable()->default(0)->comment('既読フラグ');
-            $table->bigIncrements('id');
-            $table->timestamps();
+        $table->bigIncrements('id');
+          $table->integer("title_id")->comment('ゲームタイトルID');
+          $table->text("body")->comment('投稿テーブル');
+          $table->integer("user_id")->comment('ユーザーID');
+          $table->integer("post_kind")->default(0)->comment('0,通常投稿1,募集');
+          $table->timestamps();
         });
     }
 
