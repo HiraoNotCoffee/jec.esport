@@ -29,5 +29,4 @@ Route::get('/contact/success', 'ContactController@success');
 Route::get('/post', 'PostController@index');
 Route::post('/post/post', 'PostController@post');
 Route::get('/post/postdetail/{id}', 'PostController@detail');
-Route::get('/post/postlist','PostController@viewlist');a
-=======
+Route::get('/post/postlist','PostController@viewlist');
