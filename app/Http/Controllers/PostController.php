@@ -33,8 +33,7 @@ public function __construct()
       $body = $request->body;
       $userid = Auth::id();
       $postkind = $request->post_kind;
-      \Log::debug('$title_id');
-      \Log::debug($titleid);
+
       $data = Post::create([
         'title_id' => $titleid,
         'body' => $body,
