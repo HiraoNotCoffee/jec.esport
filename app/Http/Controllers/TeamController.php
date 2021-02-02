@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Team;
 use App\User;
+use App\Activeweek;
 // use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Facades\Auth;
 class TeamController extends Controller
@@ -24,7 +25,9 @@ class TeamController extends Controller
       $teamId = $request->id;
       $team = Team::getTeam($teamId);
       if(!empty($team)){
-          return view('team.index', compact('team'));
+          $active = Activeweek::getData($teamId);
+
+          return view('team.index', compact('team', 'active'));
       }
 
       else{
@@ -55,6 +58,14 @@ class TeamController extends Controller
         'team_id' => $team['id'],
       ]);
 
+      for($i = 0; $i < 7; $i ++){
+        Activeweek::create([
+          'week' => $i,
+          'detail' => "",
+          'team_id' => $team['id'],
+        ]);
+      }
+
       return redirect('/team/index/'. $team['id']);
     }
 
@@ -69,12 +80,11 @@ class TeamController extends Controller
       }
 
       $team = Team::getTeam($teamId);
-      echo $teamId;
       if(!empty($team)){
-          return view('team.edit', compact('team'));
-      }
+          $active = Activeweek::getData($teamId);
 
-      var_dump($team);
+          return view('team.edit', compact('team', 'active'));
+      }
 
       // else{
       //   return \App::abort(404);
@@ -89,11 +99,30 @@ class TeamController extends Controller
           $fileName = time() . $file->getClientOriginalName();
           $file->storeAs('/public/user', $fileName);
           $path = 'user/'. $fileName;
+
+
+          Team::where('id', $teamId)->update([
+            'icon' => $path,
+          ]);
       }
 
-      echo "<img src='". asset('storage/' . $path) . "'>";
 
-      return ;
+
+      var_dump($request->active);
+      foreach ($request->active as $key => $value) {
+
+          Activeweek::where('week', $key)->where('team_id', $teamId)->update([
+            'detail' => $value,
+          ]);
+      }
+      // echo "<img src='". asset('storage/' . $path) . "'>";
+
+      Team::where('id', $teamId)->update([
+        'name' => $name,
+        'detail' => $detail,
+      ]);
+
+      return redirect('team/index/'. $teamId);
       //
       // $team = Team::getTeam($teamId);
       // if(!empty($team)){
@@ -103,5 +132,31 @@ class TeamController extends Controller
       // else{
       //   return \App::abort(404);
       // }
+    }
+
+    public function member(){
+      $userId = Auth::id();
+      $teamId = User::getTeamId($userId);
+      $message = "";
+      $member = [];
+      if($teamId > -1){
+        $member = User::getTeamMember($teamId);
+      }
+      else{
+        $message = "あなたはチームに所属していません";
+      }
+
+      return view('team.member', compact(['member', 'message']));
+
+    }
+
+    public function remove(Request $request){
+      $id = $request->id;
+      User::where('id', $id)->update([
+          'team_id' => null,
+        ]);
+
+      return redirect('team/member');
+
     }
 }

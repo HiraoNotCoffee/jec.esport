@@ -11,30 +11,40 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+/**
+* 基本ルート
+*/
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('user', 'UserController@index');
-Route::post('user/edit', 'UserController@edit');
-Route::get('user/profile', 'UserController@profile');
-Route::get('/user', 'UserController@index');
-Route::post('user/edit', 'UserController@edit');
-Route::get('user/profile', 'UserController@profile');
-Route::get('/contact', 'ContactController@index');
-Route::post('/contact/post', 'ContactController@post');
-Route::post('/contact/post', 'ContactController@postlist');
-// Route::post('/contact/post', 'ContactController@post');
-Route::get('/contact/success', 'ContactController@success');
+Route::get('/', 'HomeController@top')->name('home');
 
+/**
+* チーム関係
+*/
 Route::post('/team/create', 'TeamController@create');
 Route::get('/team/index/{id}', 'TeamController@index');
 Route::get('/team/edit', 'TeamController@edit');
 Route::post('/team/edit/post', 'TeamController@editPost');
+Route::get('/team/member', 'TeamController@member');
+Route::post('/team/remove', 'TeamController@remove');
+
+/**
+* ユーザー関係
+*/
+Route::get('user', 'UserController@index');
+Route::post('user/edit', 'UserController@edit');
+Route::get('user/profile', 'UserController@profile');
+
+/**
+* お問い合わせ
+*/
 Route::get('/post', 'PostController@index');
 Route::post('/post/post', 'PostController@post');
 Route::get('/post/postdetail/{id}', 'PostController@detail');
 Route::get('/post/postlist','PostController@viewlist');
+
+/**
+*　お問い合わせ
+*/
+Route::get('/contact', 'ContactController@index');
+Route::post('/contact/post', 'ContactController@post');

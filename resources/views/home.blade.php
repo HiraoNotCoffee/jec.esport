@@ -19,9 +19,5 @@
             </div>
         </div>
     </div>
-    <form class="" action="{{ url('team/create') }}" method="post">
-      @csrf
-      <input type="submit" name="submit" value="作成">
-    </form>
 </div>
 @endsection

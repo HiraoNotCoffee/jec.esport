@@ -18,7 +18,13 @@ class Post extends Model
     protected $fillable=['id', 'title_id', 'body', 'user_id', 'post_kind'];
 
     public static function getData($id){
-      return Post::where('id', $id)->get()->toArray()[0];
+      if(self::where("id", $id)->exists()){
+
+        return Post::where('id', $id)->get()->toArray()[0];
+      }
+      else{
+        return [];
+      }
     }
 
     public static function getDataList(){
