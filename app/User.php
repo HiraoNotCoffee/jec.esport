@@ -47,6 +47,20 @@ class User extends Authenticatable
       return $user;
     }
 
+    /*
+    * チームIDを取得
+    * 入っていなかったら -1 を返す
+    * @return boolean
+    */
+    public static function getTeamId($id){
+      $team_id = self::where('id', $id)->value('team_id');
+      if(!is_NULL($team_id))  {
+        return $team_id;
+      }
+      else{
+        return -1;
+      }
+    }
 
 
 }

@@ -26,6 +26,11 @@ Route::post('/contact/post', 'ContactController@post');
 Route::post('/contact/post', 'ContactController@postlist');
 // Route::post('/contact/post', 'ContactController@post');
 Route::get('/contact/success', 'ContactController@success');
+
+Route::post('/team/create', 'TeamController@create');
+Route::get('/team/index/{id}', 'TeamController@index');
+Route::get('/team/edit', 'TeamController@edit');
+Route::post('/team/edit/post', 'TeamController@editPost');
 Route::get('/post', 'PostController@index');
 Route::post('/post/post', 'PostController@post');
 Route::get('/post/postdetail/{id}', 'PostController@detail');
