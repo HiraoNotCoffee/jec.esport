@@ -1,0 +1,23 @@
+<?php
+return [
+  "PC",
+  "PS4",
+  "スマホ",
+  "XBOX",
+  "PS5",
+  "ps1",
+  "PS2",
+  "ps3",
+  "PSP",
+  "3DS",
+  "switch",
+  "2DS",
+  "DS light",
+  "game cube",
+  "game boy advance",
+  "famicon",
+  "super famicon",
+  "Wii",
+  "Wii U",
+  "VR",
+];

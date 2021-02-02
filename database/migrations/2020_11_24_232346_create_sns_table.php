@@ -32,4 +32,5 @@ class CreateSnsTable extends Migration
     {
         Schema::dropIfExists('sns');
     }
+    
 }
