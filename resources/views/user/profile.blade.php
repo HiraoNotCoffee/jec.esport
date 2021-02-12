@@ -40,5 +40,4 @@
   </ul>
   <textarea name="detail" value="" rows="20" cols="80">{{ $user['detail'] }}</textarea>
 </form>
-
 @endsection

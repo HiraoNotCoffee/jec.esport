@@ -25,7 +25,7 @@ public function __construct()
 
     return view('post.post');
 
-    }
+  }
 
     public function post(Request $request){
 
@@ -68,7 +68,19 @@ public function __construct()
       return view('post.postlist', compact('posts'));
     }
 
+    public function listRecruit(){
+      $posts = Post::getListRecruit();
+      $title = "募集一覧";
 
+      return view("post.list", compact(['posts', 'title']));
+    }
+
+    public function listRecruit(){
+      $posts = Post::getListBattle();
+      $title = "投稿一覧";
+
+      return view("post.list", compact(['posts', 'title']));
+    }
 
 
 

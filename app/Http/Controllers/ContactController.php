@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Contact;
+use App\Mail\ContactMail;
+use Illuminate\Support\Facades\Mail;
+
+
 class ContactController extends Controller
 {
     public function index(){
@@ -15,10 +19,13 @@ class ContactController extends Controller
       $mail = $request->mail;
 
       $body = $request->body;
-      \Log::debug($name);
-      \Log::debug($mail);
-      \Log::debug($body);
-      \Log::debug('hhhhhhh');
+
+
+      $contact = $request->all();
+      // Mail::to('19jn0223@jec.ac.jp')
+      //           ->send(new ContactMail($contact)); // 引数にリクエストデータを渡す
+
+
       Contact::create([
         'name' => $name,
         'mail' => $mail,
@@ -27,12 +34,13 @@ class ContactController extends Controller
 
       return redirect('/contact/success');
     }
+
     public function rules()
     {
-    return [
-        'title' => 'required|unique:posts|max:255',
-        'body' => 'required',
-    ];
+      return [
+          'title' => 'required|unique:posts|max:255',
+          'body' => 'required',
+      ];
     }
 
     public function success(){
