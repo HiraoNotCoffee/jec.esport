@@ -41,10 +41,19 @@ Route::get('user/profile', 'UserController@profile');
 */
 Route::get('/post/list/recruit', 'PostController@listRecruit');
 Route::get('/post/list/battle', 'PostController@listBattle');
+
 Route::get('/post', 'PostController@index');
 Route::post('/post/post', 'PostController@post');
 Route::get('/post/postdetail/{id}', 'PostController@detail');
 Route::get('/post/postlist','PostController@viewlist');
+
+// オファー関係
+Route::group(['middleware' => ['auth']], function () {
+  Route::get('/offer/offer/{team_id}', 'OfferController@offerlist');
+  Route::get('/offer', 'OfferController@index');
+  Route::post('/offersend/offerdone', 'OfferController@offer');
+  Route::get('/offersend/offerdone/', 'OfferController@offerdone');
+});
 
 /**
 *　お問い合わせ
