@@ -63,4 +63,14 @@ class User extends Authenticatable
     }
 
 
+      public static function getTeamMember($id){
+
+          return self::where('team_id', $id)->get()->toArray();
+      }
+
+      public static function getDataList(){
+        return self::get()->toArray();
+      }
+
+
 }

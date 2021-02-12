@@ -18,6 +18,11 @@
  <br>
   <a href="{{ url('/user/profile') }}">プロフィールの編集</a>
 
+  <form class="" action="{{ url('team/create') }}" method="post">
+    @csrf
+    <input type="submit" name="submit" value="チームの作成">
+  </form>
+
   <br>
   <br>
   <h1>所属チーム</h1>
