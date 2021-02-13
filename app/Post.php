@@ -30,4 +30,12 @@ class Post extends Model
     public static function getDataList(){
       return Post::get()->toArray();
     }
+
+    public static function getListRecruit(){
+      return self::where("post_kind", 1)->get()->toArray();
+    }
+
+    public static function getListBattle(){
+      return self::where("post_kind", 0)->get()->toArray();
+    }
 }

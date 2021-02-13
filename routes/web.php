@@ -32,12 +32,15 @@ Route::post('/team/remove', 'TeamController@remove');
 * ユーザー関係
 */
 Route::get('user', 'UserController@index');
+Route::get('user/list', 'UserController@list');
 Route::post('user/edit', 'UserController@edit');
 Route::get('user/profile', 'UserController@profile');
 
 /**
-* お問い合わせ
+* 投稿　　
 */
+Route::get('/post/list/recruit', 'PostController@listRecruit');
+Route::get('/post/list/battle', 'PostController@listBattle');
 Route::get('/post', 'PostController@index');
 Route::post('/post/post', 'PostController@post');
 Route::get('/post/postdetail/{id}', 'PostController@detail');
@@ -48,3 +51,9 @@ Route::get('/post/postlist','PostController@viewlist');
 */
 Route::get('/contact', 'ContactController@index');
 Route::post('/contact/post', 'ContactController@post');
+Route::get('/contact/success', 'ContactController@success');
+
+/**
+* チャット関係
+*/
+Route::get('/chat/{id}', 'ChatController@index');

@@ -119,7 +119,7 @@ class UserController extends Controller
   }
     echo "<script>alert('編集が完了しました');</script>";
     return redirect('/user');
-  } 
+  }
 
   public function profile(){
     $userId = Auth::id();
@@ -138,5 +138,11 @@ class UserController extends Controller
       ];
     }
     return view('user.profile', compact(['user', 'game_titles', 'platform', 'sns']));
+  }
+
+  public function list(){
+    $users = User::getDataList();
+
+    return view('user.list', compact('users'));
   }
 }
