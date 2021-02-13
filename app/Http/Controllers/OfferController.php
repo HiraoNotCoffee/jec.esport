@@ -3,12 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Post;
+use App\Offer;
 use Illuminate\Support\Facades\Auth;
 use App\User;
 
 class OfferController extends Controller
 {
+
+
+ public function __construct()
+ {
+     $this->middleware('auth');
+ }
+
   public function index(){
 
     $this->middleware('auth');
@@ -17,24 +24,28 @@ class OfferController extends Controller
 
   }
   public function offer(Request $request){
+    // おくりたいユーザーのID
+    $userid = Auth::id();
+    //送り元チームid
+    $teamid = id::team_id();
 
-    $userid = $request->user_id;
-    $teamid = Auth::team_id();
-    $reaction = $request->reaction;
-    $flg = $request->flg;
+    \Log::debug($userid);
+    \Log::debug($teamid);
 
+    //DB
     $data = Offer::create([
       'user_id' => $userid,
       'team_id' => $teamid,
-      'reaction' => $reaction,
-      'flg' => $flg
     ]);
 
+    
 
 
 
-    return redirect('/offer/offer/'. $data->id);
+    //return redirect('/offer/offer/'. $data->id);
+    return view('offer.offerdone');
   }
+
 
     public function detail(Request $request){
       $id = $request->id;
@@ -47,16 +58,23 @@ class OfferController extends Controller
 
       }
 
+  public function keepsend(){
+    return view('offer.offersend');
+  }
+  public function offerdone(Request $request){
+    return view ('offer.offerdone');
+  }
 
   public function offerlist(){
 
     $offers = Offer::getDataList();
     foreach ($offers as $key => $offer) {
 
-    $team = Team::getTeam($post['team_id']);
+    $team = Team::getTeam($request->team_id);
     $offers[$key] += [
       'team_name' => $user['name'],
     ];
+
   }
   return view('offer.offerkeeplist', compact('offers'));
 }

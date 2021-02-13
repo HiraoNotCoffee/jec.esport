@@ -18,15 +18,24 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/user', 'UserController@index');
+Route::post('user/edit', 'UserController@edit');
+Route::get('user/profile', 'UserController@profile');
 Route::get('/contact', 'ContactController@index');
 Route::post('/contact/post', 'ContactController@post');
 Route::post('/contact/post', 'ContactController@postlist');
+
 // Route::post('/contact/post', 'ContactController@post');
 Route::get('/contact/success', 'ContactController@success');
 Route::get('/post', 'PostController@index');
 Route::post('/post/post', 'PostController@post');
 Route::get('/post/postdetail/{id}', 'PostController@detail');
 Route::get('/post/postlist','PostController@viewlist');
-Route::post('/offer/offer', 'OfferController@offer');
-Route::get('/offer/offerkeeplist','OfferController@offerkeeplist');
-Route::get('/offer', 'OfferController@index');
+
+Route::group(['middleware' => ['auth']], function () {
+  Route::get('/offer/offer/{team_id}', 'OfferController@offerlist');
+  Route::get('/offer', 'OfferController@index');
+  Route::post('/offersend/offerdone', 'OfferController@offer');
+  Route::get('/offersend/offerdone/', 'OfferController@offerdone');
+
+});

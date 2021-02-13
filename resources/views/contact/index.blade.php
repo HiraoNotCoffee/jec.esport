@@ -8,7 +8,7 @@
   <label for>お名前<label>
   <input type="text" name="name" value="" required>
   <label for>メールアドレス</label>
-  <input type="text" name="mail" value="" required>
+  <input type="email" name="mail" value="" required>
   <label for>お問い合わせの内容</label>
   <input type="text" name="body" value="" required>
   <input type="submit" name="submit" value="送信">

@@ -2,7 +2,7 @@
 
 
 @section('content')
-<form class="" action="{{ url('/offer/offerdone') }}" method="post">
+<form class="" action="{{ url('/offer/offerkeeplist') }}" method="offer">
 @csrf
 
 

@@ -19,4 +19,4 @@
 
 @endsection
 
-<?php
+@php @endphp

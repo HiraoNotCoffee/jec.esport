@@ -2,7 +2,7 @@
 
 
  @section('content')
-<form class="" action="{{ url('/offer/offer') }}" method="offer">
+<form class="" action="{{ url('/offer/offer') }}" method="post">
  @csrf
 
   <p>ユーザ名</p>

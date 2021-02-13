@@ -2,21 +2,21 @@
 
 
 @section('content')
-<form class="" action="{{ url('/offer/offerpost') }}" method="offer">
+<form class="" action="{{ url('/offer/offersend') }}" method="post">
 @csrf
 
 
 
-  <input type="text" name="body" value="" >
+
 
   <p>ユーザ名</p>
   <a>オファーを本当に送信しますか?</a>
-
+　
   <input type="submit" value="送信" >
-
+   <button onclick="history.back()">戻る</button>
 
 </form>
 
 @endsection
 
-<?php
+@php @endphp
