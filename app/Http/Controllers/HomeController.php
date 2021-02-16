@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Team;
+use App\GameTitle;
 class HomeController extends Controller
 {
     /**
@@ -25,8 +27,11 @@ class HomeController extends Controller
     }
 
     public function top(){
+      $users = User::getTopData();
+      $teams = Team::getTopData();
+      $game = GameTitle::get()->toArray();
 
-
-      return view("welcome");
+      return view("welcome", compact(['users', 'teams', 'game']));
     }
 }
+ 

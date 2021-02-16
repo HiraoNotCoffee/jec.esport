@@ -18,4 +18,10 @@ class Team extends Model
 
     return self::where('id', $id)->get()->toArray()[0];
   }
+
+
+
+  public static function getTopData(){
+    return self::limit(6)->get();
+  }
 }

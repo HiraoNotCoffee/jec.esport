@@ -1,0 +1,1111 @@
+header {
+  display: flex;
+  padding: 24px 50px 24px 50px;
+  justify-content: space-between;
+  border-bottom: solid 1px #707070;
+  background-color: #ffffff;
+}
+
+body {
+  margin: 0;
+  background-color: whitesmoke;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  margin: 0 0 0 30px;
+}
+
+nav {
+  float: right;
+}
+
+/*----------------------------------------------------------------------------*/
+.footer{
+    padding: 24px 50px 24px 50px;
+    border-top: solid 1px #707070;
+    background-color: #ffffff;
+    height: 373px;
+    text-align:center;
+    font-size: 100px;
+}
+
+.con{
+  width: 1200px;
+  height: 327px;
+}
+.con img{
+  width: 98.96vw;
+  height: 327px;
+}
+.con span{
+  position: relative;
+  top:50%;
+  left: 50%;
+}
+.history{
+  margin: 10px;
+  padding: 10px;
+}
+
+.box{
+  margin:auto;
+  padding: 20px 30px;
+  width: 459px;
+  height: 461px;
+  border: 1px;
+  box-sizing: content-box;
+  box-shadow: 0 0 4px gray;
+  background-color: white;
+}
+
+.box2{
+  margin:auto;
+  padding: 20px 30px;
+  width: 459px;
+  height: 356px;
+  border: 1px;
+  box-sizing: content-box;
+  box-shadow: 0 0 4px gray;
+  background-color: white;
+}
+
+.box3{
+  margin:auto;
+  padding: 20px 30px;
+  width: 459px;
+  height: 372px;
+  border: 1px;
+  box-sizing: content-box;
+  box-shadow: 0 0 4px gray;
+  background-color: white;
+}
+.box4{
+  margin:auto;
+  padding: 20px 30px;
+  width: 459px;
+  height: 401px;
+  border: 1px;
+  box-sizing: content-box;
+  box-shadow: 0 0 4px gray;
+  background-color: white;
+}
+
+.text{
+  width: 430px;
+  height: 39px;
+  border-right:none;
+  border-left:none;
+  border-top:none;
+  border-radius:0px;
+  font-size: 20px;
+}
+
+.forget{
+  margin-top: 15px;
+  padding-left:0px;
+}
+
+.login{
+  float : right;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  width: 105px;
+  height: 40px;
+  background-color: #0099ff;
+  border: none;
+  color: white;
+}
+
+.noregister{
+  text-align: center;
+  padding-top:70px;
+}
+
+.register{
+  float: right;
+  margin: 30px;
+  width: 105px;
+  height: 40px;
+  background-color: #0099ff;
+  border: none;
+  color: white;
+}
+
+.reissue{
+  float: right;
+  margin: 30px;
+  width: 105px;
+  height: 40px;
+  background-color: #0099ff;
+  border: none;
+  color: white;
+}
+
+.alert{
+  margin-top: 70px;
+  padding: 30px;
+}
+.thx{
+  text-align: center;
+}
+.thx h1{
+  font-size: 25px;
+  padding: 20px;
+}
+.profile{
+  text-align: center;
+  margin: 20px;
+  margin-left: 120px;
+  margin-top: 40px;
+  width: 213px;
+  height: 51px;
+  background-color: #0099ff;
+  border: none;
+  color: white;
+}
+
+.top{
+  text-align: center;
+  margin: 20px;
+  margin-left: 120px;
+  width: 213px;
+  height: 51px;
+}
+.font1{
+  font-size: 28px;
+  text-align: center;
+  padding: 10px;
+}
+.font2{
+  font-size: 18px;
+  text-align: center;
+  padding: 10px;
+}
+
+.header{
+  width: 100%;
+  height: 359px;
+}
+
+.detail{
+  padding-right: 0px;
+  margin-left: 38%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.border{
+  border: solid 1px;
+  margin-top: 0px;
+}
+
+.image{
+  margin:10px;
+  padding: 10px 20px;
+  width: 193px;
+  height: 57px;
+  border: 1px;
+  box-sizing: content-box;
+  box-shadow: 0 0 4px gray;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.right{
+  float: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-right: 80px;
+}
+.sns{
+  width: 40px;
+  height: 30px;
+  margin: auto;
+  padding: 0 6px;
+}
+.profile1{
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+  width: 193px;
+  height: 50px;
+  background-color: #0099ff;
+  border: none;
+  color: white;
+}
+.offer{
+  text-align: center;
+  margin: 20px;
+  margin-top: 0px;
+  padding: 10px;
+  width: 193px;
+  height: 50px;
+  background-color: white;
+}
+.caption{
+  border-left: solid 10px gray;
+  margin-left: 80px;
+  padding: 10px;
+}
+.team{
+  margin-left: 80px;
+  box-sizing: content-box;
+  box-shadow: 0 0 4px gray;
+  background-color: white;
+  width: 450px;
+  height: 202px;
+}
+.team_image{
+  width: 165px;
+  height: 149px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.team_detail{
+  padding-left: 40px;
+  font-size: 15px;
+}
+.team_detail p{
+  margin-top: 0px;
+}
+
+.recruit{
+  margin: 70px;
+  font-size: 20px;
+}
+.recruit2{
+  margin: 70px;
+  font-size: 20px;
+  padding-bottom: 60px;
+}
+.image2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 60px 40px;
+}
+.youtube{
+  width: 206px;
+  height: 150px;
+  margin-right: 0px;
+  padding-left: 0px;
+  padding-right: 28px;
+}
+.body{
+  border: 1px;
+  box-sizing: content-box;
+  background-color: white;
+  box-shadow: 0 0 4px gray;
+  width: 97.5%;
+  padding: 0px;
+  margin: 0 auto;
+}
+
+.user{
+  font-size: 35px;
+}
+.detail2{
+  padding-right: 0px;
+  margin-left: 38%;
+  margin-bottom: 30px;
+}
+.username{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 283px;
+  height: 47px;
+  font-size: 30px;
+  margin: 20px;
+  margin-left: 0px;
+}
+.platform{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin: 10px;
+  margin-left: 15px;
+  width: 147px;
+}
+.gametitle{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin: 10px;
+  margin-left: 30px;
+  width: 147px;
+}
+.fontcolor{
+  color: gray;
+  font-size: 13px;
+}
+.snsdetail{
+  margin: 20px 80px;
+}
+.snsid{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.sns1{
+  width: 60px;
+  height: 53.5px;
+  margin-bottom: 10px;
+}
+.sns2{
+  margin-left: 50px;
+  width: 60px;
+  height: 53.5px;
+  margin-bottom: 10px;
+}
+.snstext{
+  border: solid 0.5px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-top: 25px;
+  margin-left: 50px;
+  width: 250px;
+  font-size: 20px;
+}
+
+.cont_a{
+  float: right;
+  padding: 10px;
+  margin-top: 10px;
+}
+.cont_b{
+  display: flex;
+  padding: 10px;
+}
+.team_icon{
+  width: 70px;
+  height: 50px;
+}
+.permit{
+  margin: 5px;
+  border: 1px solid black;
+  background-color: white;
+  color: red;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+}
+.reject{
+  margin: 5px;
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+}
+.team_name{
+  padding-left: 10px;
+}
+.offer_list{
+  margin: 0px 80px;
+  padding:40px 0px 60px 0px;
+}
+.offer_item hr{
+  margin-top: 0px;
+}
+/*----------------------------------------------------------------------------*/
+.box-wall-paper {
+  display: flex;
+}
+
+.wall-paper {
+  width: 100%;
+  height: 359px;
+}
+
+.team-icon {
+  width: 357px;
+  height: 357px;
+  position: absolute;
+  top: 328px;
+  left: 129px;
+}
+}
+
+.box-team-icon {
+  display: flex;
+}
+
+.team-name-tag {
+  position: absolute;
+  top:
+}
+
+.box-inner-tag {
+  top: -285px;
+  left: 47%;
+  width: 45%;
+  margin: 0;
+  padding: 1px;
+  border: 1px solid #707070;
+}
+
+.box-innerteam {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.box-innerteam-head {
+  text-align: center;
+  margin: auto;
+}
+}
+
+.box-innerteam-img {
+  width: 200px;
+  height: 181.7px;
+  padding: 30px 37px 30px 37px;
+}
+
+.box-innerteam-name {
+  font-family: SegoeUI;
+  font-size: 24px;
+  line-height: 1.33;
+  color: #000000;
+  margin: 8px 0;
+  display: flex;
+}
+
+.box-tag {
+  display: flex;
+}
+
+.layout {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: -300px;
+}
+
+.layout-left, .layout-right {
+  width: 48%;
+}
+
+.layout-name {
+  font-size: 35px;
+  margin: 0 0 24px;
+}
+
+.layout-tag {
+  font-size: 15px;
+  padding: 2px 4px;
+  width: fit-content;
+  margin: 0 0 26px;
+  border: 1px solid black;
+}
+
+.activeweek {
+  margin: 20px 80px;
+  font-size: 30px;
+}
+
+.right2 {
+  display: flex;
+  margin: -330px 690px 0px 0px;
+}
+
+.week {
+  width: 50%;
+  font-size: 30px;
+}
+
+.weeks {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 80px;
+  flex-wrap: wrap;
+  max-width: 1300px;
+}
+
+/*----------------------------------------------------------------------------*/
+
+.box-wall-paper {
+  display: flex;
+}
+
+.team-name-tag {
+  position: absolute;
+  top:
+}
+
+.box-tag {
+  display: flex;
+}
+
+.layout {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: -300px;
+}
+
+.layout-left, .layout-right {
+  width: 48%;
+}
+
+.layout-name {
+  font-size: 35px;
+  margin: 0 0 24px;
+}
+
+.layout-tag {
+  font-size: 15px;
+  padding: 2px 4px;
+  width: fit-content;
+  margin: 0 0 26px;
+  border: 1px solid black;
+}
+
+.activeweek {
+  margin: 20px 80px;
+  font-size: 30px;
+}
+
+.teamname {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 283px;
+    height: 47px;
+    font-size: 30px;
+    margin: 20px;
+    margin-left: 0px;
+}
+
+.time{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin: 10px;
+  margin-left: 30px;
+  width: 240px;
+  font-size: 30px;
+}
+
+/*----------------------------------------------------------------------------*/
+
+.icon{
+  border-radius: 50%;
+  width: 357px;
+  height: 357px;
+  position: absolute;
+  top: 328px;
+  left: 129px;
+}
+
+.sns{
+  width: 40px;
+  height: 30px;
+  margin: auto;
+  padding: 0 6px;
+}
+
+.team_image{
+  width: 165px;
+  height: 149px;
+  padding-left: 20px;
+}
+
+/*----------------------------------------------------------------------------*/
+
+
+
+.boxa {
+  display: flex;
+}
+
+.box-inner-imga {
+  width: 100%;
+  height: 30vw;
+  justify-content: space-between;
+}
+
+.users {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  flex-wrap: wrap;
+  max-width: 1300px;
+}
+
+
+.box-inner {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.box-inner-img {
+  width: 24%;
+  height: 75px;
+  border-radius: 100px;
+  border: 1px solid #707070;
+}
+
+
+
+.box-inner-name {
+  font-family: SegoeUI;
+  font-size: 24px;
+  line-height: 1.33;
+  color: #000000;
+  margin: 8px 0;
+}
+
+.box-inner-team {
+  font-family: SegoeUI;
+  font-size: 12px;
+  line-height: 1.33;
+  color: #000000;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.box-inner-tegs {
+  font-family: SegoeUI;
+  font-size: 12px;
+  line-height: 1.33;
+  color: #000000;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-detail {
+  margin: 0;
+  font-family: SegoeUI;
+  font-size: 15px;
+  line-height: 1.33;
+  color: #000000;
+}
+
+.button {
+  display: block;
+  width: fit-content;
+  height: 74%;
+  margin: 64px auto 46px;
+  padding: 24px 95px 23px;
+  border: solid 1px #707070;
+  justify-content: space-between;
+  text-align: center;
+  text-decoration: none;
+}
+
+.box-team {
+  width: 520px;
+  height: 183px;
+  margin-bottom: 16px;
+  background-color: white;
+  box-shadow: 5px 3px 6px 0 rgba(0, 0, 0, 0.16);
+  padding: 16px;
+}
+
+.box-innerteam {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.box-innerteam-tegs {
+  font-family: SegoeUI;
+  font-size: 12px;
+  line-height: 1.33;
+  color: #000000;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-evenly;
+}
+
+.box-innerteam-tag {
+  margin: 5px 5px 5px 0;
+  padding: 3px;
+  display: flex;
+  border: 1px solid #707070;
+}
+
+.usersteam {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  flex-wrap: wrap;
+  max-width: 1300px;
+}
+
+.buttons {
+  display: block;
+  width: fit-content;
+  height: 74%;
+  margin: 64px auto 46px;
+  padding: 24px 95px 23px;
+  border: solid 1px #707070;
+  justify-content: space-between;
+  text-align: center;
+  text-decoration: none;
+  background-color: white;
+}
+
+.box-blog {
+  width: 331px;
+  height: 354px;
+  margin: 78px 48px 56px;
+  padding: 0 0 16px;
+  border: solid 1px #707070;
+  background-color: #ffffff;
+}
+
+.box-innerblog-img {
+  width: 327.1px;
+  height: 213.7px;
+  margin: 0.7px 0.4px 0 0px;
+  border: solid 3px #707070;
+  display: flex;
+}
+
+.box-innerblog-name {
+  width: 288px;
+  height: 36px;
+  margin: 22.6px 20px 32px 23px;
+  font-family: Meiryo;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #707070;
+}
+
+.box-innerblog-tag {
+  width: 54px;
+  height: 27px;
+  margin: -30px 41px -25px 63px;
+  font-family: Meiryo;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #707070;
+}
+
+.box-innerblog-time {
+  width: 102px;
+  height: 27px;
+  margin: 2px 0 1px 193px;
+  font-family: Meiryo;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #707070;
+}
+
+.box-innerbloga-img {
+  width: 30px;
+  height: 30px;
+  margin: 0 18px 0 0;
+  padding: 4.3px 4.4px 4.4px 4.5px;
+  border: solid 1px #707070;
+  display: flex;
+  background-color: #cccccc;
+  border-radius: 100px;
+}
+
+.blog {
+  display:flex;
+  justify-content: space-evenly;
+  margin: auto;
+  padding:10px;
+  max-width: 1300px;
+  flex-direction: row;
+}
+.abcd{
+  width: 100vw;
+    height: 12vw;
+    margin: 59px 0px -1% 0px;
+    justify-content: space-between;
+    display: flex;
+
+}
+.boxb{
+  display: flex;
+}
+
+
+/*----------------------------------------------------------------------------*/
+
+.box-inner-head {
+  margin: 0;
+  width: 71%;
+}
+
+.abcd{
+  width: 100vw;
+    height: 12vw;
+    margin: 59px 0px -1% 0px;
+    justify-content: space-between;
+    display: flex;
+
+}
+.boxb{
+  display: flex;
+}
+
+
+/*----------------------------------------------------------------------------*/
+
+.boxb{
+  display: flex;
+}
+
+
+/*----------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------*/
+
+.button {
+  display: block;
+  width: fit-content;
+  height: 74%;
+  margin: 64px auto 46px;
+  padding: 24px 95px 23px;
+  border: solid 1px #707070;
+  justify-content: space-between;
+  text-align: center;
+  text-decoration: none;
+}
+
+.box-innerteam {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+/*----------------------------------------------------------------------------*/
+.test{
+  width:1101px;
+  height:755px;
+  margin: auto;
+  padding: 20px 30px;
+  border: 1px;
+  box-sizing: content-box;
+  box-shadow: 0 0 4px grey;
+  background-color: white;
+}
+.test h1{
+  text-align:center;
+padding:30px;
+}
+.test p{
+padding:90px 60px;
+}
+/*----------------------------------------------------------------------------*/
+.userbox{
+    margin: 20px 70px;
+    padding: 20px 30px;
+    width: 450px;
+    box-sizing: content-box;
+    box-shadow: 0 0 4px grey;
+    background-color: white;
+}
+.userbox2{
+    margin: 20px;
+    padding: 20px 30px;
+    width: 333px;
+    box-sizing: content-box;
+    box-shadow: 0 0 4px grey;
+    background-color: white;
+}
+.caption2{
+  border-left: solid 10px gray;
+  padding: 10px;
+  margin: 20px 40px;
+}
+.area{
+  border:1px solid;
+  border-left:none;
+  border-right:none;
+  border-top:none;
+  width:430px;
+  height:100px;
+}
+.contact{
+  float: right;
+  margin: 30px;
+  width: 105px;
+  height: 40px;
+  background-color: #0099ff;
+  border: none;
+  color: white;
+}
+.contactbox{
+  margin: 60px auto;
+  padding: 30px 30px;
+  width: 459px;
+  height: 520px;
+  border: 1px;
+  box-sizing: content-box;
+  box-shadow: 0 0 4px grey;
+  background-color: white;
+}
+
+.box-innerteam-img {
+  width: 200px;
+  height: 150px;
+  padding: 20px;
+}
+.bgcolor{
+  background-color:white;
+  padding:10px;
+}
+.line{
+  width: 130px;
+  color: #0bf;
+  border: solid 3px;
+  border-radius: 100px;
+  margin: 0px auto;
+}
+/*----------------------------------------------------------------------------*/
+.chatbox{
+  border: 1px;
+  box-sizing: content-box;
+  background-color: white;
+  box-shadow: 0 0 4px gray;
+  width: 97.5%;
+  padding: 0px;
+  margin: 0 auto;
+}
+
+.container {
+  padding: 32px;
+}
+
+.container ul{
+    display: block;
+}
+
+.messages {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.messages li {
+  display: flex;
+}
+
+.messages li + li {
+  margin-top: 32px;
+}
+
+li.right-side {
+  flex-direction: row-reverse;
+}
+
+.pic {
+  width: 80px;
+  text-align: center;
+}
+
+.pic img {
+  width: 48px;
+  height:48px;
+  border-radius: 50%;
+}
+
+.txt {
+  border: 1px solid;
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  max-width: 60%;
+  line-height: 1.8;
+}
+
+.txt::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  position: absolute; /* 絶対位置 */
+}
+
+/* 吹き出しの三角を作成する */
+.left-side .txt::before {
+  top: 12px;
+  left: -16px;
+  border-right-color: #fff;
+}
+
+/* 吹き出しの三角を作成する */
+.right-side .txt::before {
+  top: 12px;
+  right: -16px;
+  border-left-color: #fff;
+}
+/*----------------------------------------------------------------------------*/
+.bms_send {
+    background-color:#eee;/*タイムラインの色と同じにする*/
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    height: 48px;
+    padding: 4px;
+    margin-bottom: 30px;
+}
+.bms_send_message{
+      font-size: xx-large;
+    width: calc(100% - 75px);/*常に送信ボタンの横幅を引いたサイズに動的に計算*/
+    line-height: 16px;
+    height: 48px;
+    padding: 14px 6px 0px 6px;/*文字がテキストエリアの中心になる様に隙間調整*/
+    border: 1px solid #ccc;
+    border-radius: 4px;/*角丸*/
+    text-align: left;/*文字を左寄せ*/
+    box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.2) inset;/*内側に影を入れてテキストエリアらしくした*/
+    box-sizing: border-box;/*paddingとborderの要素の高さと幅の影響をなくす（要素に高さと幅を含める）*/
+
+}
+.bms_send_btn {
+    width: 72px;
+    height: 48px;
+    font-size: 16px;
+    line-height: 3em;
+    float: right;/*bms_sendに対して右寄せ*/
+    color: #fff;
+    font-weight: bold;
+    background: #bcbcbc;
+    text-align: center;/*文字をボタン中央に表示*/
+    border: 1px solid #bbb;
+    border-radius: 4px;/*角丸*/
+    box-sizing: border-box;/*paddingとborderの要素の高さと幅の影響をなくす（要素に高さと幅を含める）*/
+}
+.bms_send_btn:hover {
+    background: #13178E; /*マウスポインタを当てた時にアクティブな色になる*/
+    cursor: pointer;/*マウスポインタを当てた時に、カーソルが指の形になる*/
+}

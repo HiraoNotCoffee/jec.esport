@@ -62,6 +62,10 @@ class User extends Authenticatable
       }
     }
 
+    public static function getTopData(){
+      return self::limit(6)->get();
+    }
+
 
       public static function getTeamMember($id){
 
