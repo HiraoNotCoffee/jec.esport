@@ -9,6 +9,14 @@
 
   <input type="file" name="mainImg" value="">
 
+  <input type="活動日1" name="active[]" value="{{ $active[0] }}">
+  <input type="活動日2" name="active[]" value="{{ $active[1] }}">
+  <input type="活動日3" name="active[]" value="{{ $active[2] }}">
+  <input type="活動日4" name="active[]" value="{{ $active[3] }}">
+  <input type="活動日5" name="active[]" value="{{ $active[4] }}">
+  <input type="活動日6" name="active[]" value="{{ $active[5] }}">
+  <input type="活動日7" name="active[]" value="{{ $active[6] }}">
+
   <input type="submit" name="submit" value="送信">
 </form>
 

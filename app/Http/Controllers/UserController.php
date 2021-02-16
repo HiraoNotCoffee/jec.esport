@@ -38,18 +38,19 @@ class UserController extends Controller
     }
 
     $post = Post::getData($userId);
-    if($user == null){
-      return('view.index');
-    }else{
       // ユーザーが現在DBに保存してる情報をとってくる
       //$userSns = UserSns::getValue($userId);
       // そのとってきた情報に対応するSNSの情報を取得する
+      $userPlatform = "";
+      if($user['play_environment']){
+        $userPlatform = $platform[$user['play_environment']];
+      }
+
       $user += [
         'title_name' => GameTitle::getValue($user['title_id']),
-        'platform' => $platform[$user['play_environment']],
+        'platform' => $userPlatform,
       ];
       return view('user.index', compact(['user', 'sns', 'post']));
-    }
   }
 
     /* プロフィールに表示するユーザー名、プラットフォーム名、
@@ -137,5 +138,11 @@ class UserController extends Controller
       ];
     }
     return view('user.profile', compact(['user', 'game_titles', 'platform', 'sns']));
+  }
+
+  public function list(){
+    $users = User::getDataList();
+
+    return view('user.list', compact('users'));
   }
 }

@@ -23,8 +23,7 @@
 
 @endsection
 
-<?php
-
+@php @endphp
 
 
 

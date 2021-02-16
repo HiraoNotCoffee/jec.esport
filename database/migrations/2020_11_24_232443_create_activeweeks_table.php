@@ -17,7 +17,7 @@ class CreateActiveweeksTable extends Migration
 
             $table->integer("week")->comment('曜日[0,日, 1,月 ~ 6, 土]');
             $table->text("detail")->nullable()->comment('内容');
-            $table->string("user_id")->comment('ユーザーID');
+            $table->string("team_id")->comment('チームID');
             $table->bigIncrements('id');
             $table->timestamps();
         });

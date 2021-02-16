@@ -45,27 +45,5 @@ class DatabaseSeeder extends Seeder
             'icon' => "https://instagram.com/",
           ],
         ]);
-        DB::table('user_sns')->insert([
-          [
-            'name' => "Twitter",
-            'url' => "a",
-            'icon' => "https://twitter.com/",
-          ],
-          [
-            'name' => "youtube",
-            'url' => "a",
-            'icon' => "https://YouTube.com/",
-          ],
-          [
-            'name' => "facebook",
-            'url' => "a",
-            'icon' => "https://facebook.com/",
-          ],
-          [
-            'name' => "instagram",
-            'url' => "a",
-            'icon' => "https://instagram.com/",
-          ],
-        ]);
     }
 }
