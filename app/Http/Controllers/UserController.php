@@ -20,8 +20,9 @@ class UserController extends Controller
    */
   public function __construct()
   {
-      $this->middleware('auth');
+      $this->middleware('auth')->except(['profile', 'list']);
   }
+  
   public function index(){
     $userId = Auth::id();
     $user = User::getUser($userId);
@@ -121,8 +122,9 @@ class UserController extends Controller
     return redirect('/user');
   }
 
-  public function profile(){
-    $userId = Auth::id();
+
+  public function profile(Request $request){
+    $userId = $request->id;
     $user = User::getUser($userId);
     $platform = config('platform');
     $game_titles = GameTitle::getDataList();
@@ -137,12 +139,24 @@ class UserController extends Controller
         'val' => $userSns,
       ];
     }
-    return view('user.profile', compact(['user', 'game_titles', 'platform', 'sns']));
+    return view('user.index', compact(['user', 'game_titles', 'platform', 'sns']));
+  }
+
+  public function myProfile(){
+
+    if(Auth::check()){
+      return redirect('user/profile/'. Auth::id());
+    }
+    else{
+      return \App::abort(404);
+    }
+
   }
 
   public function list(){
     $users = User::getDataList();
+    $game = GameTitle::get()->toArray();
 
-    return view('user.list', compact('users'));
+    return view('user.list', compact(['users', 'game']));
   }
 }

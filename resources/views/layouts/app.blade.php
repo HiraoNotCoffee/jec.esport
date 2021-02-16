@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -71,10 +71,7 @@
                 </div>
             </div>
         </nav>
-
-        <main class="py-4">
             @yield('content')
-        </main>
     </div>
       <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
       @yield('js')

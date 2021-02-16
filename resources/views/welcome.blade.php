@@ -1,99 +1,38 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
+@section('content')
+<div class="boxa"> <img src="b.jpg" alt="" class="box-inner-imga"> </div>
+<section class="users">
+  @foreach($users as $key => $val)
+    <div class="box">
+      <div class="box-inner"> <img src="a.jpg" alt="" class="box-inner-img">
+        <div class="box-inner-head">
+          <p class="box-inner-name">{{ $val->name }}</p>
+          <div class="box-inner-tegs">
+            @if($val->title)
+              <p class="box-inner-tag">{{ $game[$val->title] }}</p>
             @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
+          </div>
         </div>
-    </body>
-</html>
+      </div>
+      <p class="box-detail">{{ $val->detail }} </p>
+    </div>
+  @endforeach
+</section> <a href=" " class="button">移動する</a>
+<div class="v_line_left">
+  <p class="team">チーム一覧</p>
+</div>
+<section class="usersteam">
+  @foreach($teams as $key => $val)
+    <div class="box-team">
+      <div class="box-inner-team"> <img src="a.jpg" alt="" class="box-innerteam-img">
+        <div class="box-innerteam-head">
+          <p class="box-innerteam-name">{{ $val->team }}</p>
+        </div>
+      </div>
+    </div>
+  @endforeach
+</section>
+<a href=" " class="buttons">もっと見る</a>
+<div class="boxb"> <img src="e.jpg" alt="" class="abcd"> </div>
+@endsection

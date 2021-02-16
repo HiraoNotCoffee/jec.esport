@@ -31,10 +31,11 @@ Route::post('/team/remove', 'TeamController@remove');
 /**
 * ユーザー関係
 */
-Route::get('user', 'UserController@index');
+// Route::get('user', 'UserController@index');
 Route::get('user/list', 'UserController@list');
 Route::post('user/edit', 'UserController@edit');
-Route::get('user/profile', 'UserController@profile');
+Route::get('user/profile', 'UserController@myprofile');
+Route::get('user/profile/{id}', 'UserController@profile');
 
 /**
 * 投稿　　
