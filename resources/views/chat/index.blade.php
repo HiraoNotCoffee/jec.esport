@@ -2,35 +2,6 @@
 
 
 @section('content')
-<div id="message">
-
-
-
-  @php $last = 0; @endphp
-  @foreach($message as $key => $value)
-    @if($value['id'] == $id)
-      <div class="send">
-        {{ $value['message'] }}
-      </div>
-    @else
-      <div class="recieve">
-        {{ $value['message'] }}
-      </div>
-    @endif
-
-    @php $last = $value['id']; @endphp
-  @endforeach
-
-
-</div>
-
-  <input type="text" name="" value="" id="input">
-  <button type="buton" name="button" id="send">送信</button>
-@endsection
-
-
-@section('js')
-
 <script type="text/javascript">
 $(function(){
 
@@ -162,6 +133,12 @@ $(function(){
   get_data();
 });
 </script>
+
+@endsection
+
+
+@section('js')
+
 
 
 @endsection

@@ -62,7 +62,7 @@
   <p class="box-detail">
     募集文ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーミーダミーダミーダミーダミーダミーダミーダミーダミーダミ...
   </p>
-</div> 
+</div>
 <div class="box">
   <div class="box-inner">
     <img src="a.jpg" alt="" class="box-inner-img">

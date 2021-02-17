@@ -26,23 +26,23 @@ class DatabaseSeeder extends Seeder
         DB::table('sns')->insert([
           [
             'name' => "Twitter",
-            'url' => "a",
-            'icon' => "https://twitter.com/",
+            'url' => "https://twitter.com/",
+            'icon' => "/img/twitter-brands.svg",
           ],
           [
             'name' => "youtube",
-            'url' => "a",
-            'icon' => "https://YouTube.com/",
+            'url' => "https://youtube.com/",
+            'icon' => "/img/youtube-brands.svg",
           ],
           [
             'name' => "facebook",
-            'url' => "a",
-            'icon' => "https://facebook.com/",
+            'url' => "https://facebook.com/",
+            'icon' => "/img/facebook-brands.svg",
           ],
           [
             'name' => "instagram",
-            'url' => "a",
-            'icon' => "https://instagram.com/",
+            'url' => "https://instagram.com/",
+            'icon' => "/img/instagram-brands.svg",
           ],
         ]);
     }

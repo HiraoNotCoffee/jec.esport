@@ -22,12 +22,12 @@ class UserController extends Controller
   {
       $this->middleware('auth')->except(['profile', 'list']);
   }
-  
+
   public function index(){
     $userId = Auth::id();
     $user = User::getUser($userId);
     $platform = config('platform');
-
+    $team = Team::getTeam($userId);
     $sns = Sns::getDataList();
     foreach ($sns as $key => $value) {
     $id = $value['id'];  // sns のID
@@ -51,7 +51,7 @@ class UserController extends Controller
         'title_name' => GameTitle::getValue($user['title_id']),
         'platform' => $userPlatform,
       ];
-      return view('user.index', compact(['user', 'sns', 'post']));
+      return view('user.index', compact(['user', 'sns', 'post', 'team']));
   }
 
     /* プロフィールに表示するユーザー名、プラットフォーム名、
